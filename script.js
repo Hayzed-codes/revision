@@ -31,92 +31,92 @@ function task3(callback){
 }
 
 
-task1().then(value => {console.log(value)})
-       .then(value => {console.log(value)})
-       .then(value => {console.log(value); console.log("All task completed")});
+// task1().then(value => {console.log(value)})
+//        .then(value => {console.log(value)})
+//        .then(value => {console.log(value); console.log("All task completed")});
 
 
-// // task1(() => {
-// //     task2(() => {
-// //         task3(() => {
-// //             console.log("All task completed")
-// //         })
-// //     })
-// // })
+task1(() => {
+    task2(() => {
+        task3(() => {
+            console.log("All task completed")
+        })
+    })
+})
 
-// // task1();
-// // task2();
-// // task3();
+task1();
+task2();
+task3();
 
-//     function cleanHouse (){
+    function cleanHouse (){
         
-//         return new Promise((resolve, reject) => {
-//             setTimeout(() => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
     
-//                 const houseClean = true;
+                const houseClean = true;
     
-//                 if (houseClean){
-//                     resolve("The house got tidied up by me")
-//                 }else{
-//                     reject("He didn't clean the house")
-//                 }
-//             },3000)
-//         })
-//     };
+                if (houseClean){
+                    resolve("The house got tidied up by me")
+                }else{
+                    reject("He didn't clean the house")
+                }
+            },3000)
+        })
+    };
     
-//     function washCar (){
-//         return new Promise ((resolve, reject) => {
-//             setTimeout(() => {
+    function washCar (){
+        return new Promise ((resolve, reject) => {
+            setTimeout(() => {
     
-//                 const carWashed = true;
+                const carWashed = true;
     
-//                 if (carWashed){
-//                     resolve("He has washed the car")
-//                 }else{
-//                     reject("He didn't wash the car")
-//                 }
+                if (carWashed){
+                    resolve("He has washed the car")
+                }else{
+                    reject("He didn't wash the car")
+                }
     
-//             },1000)
+            },1000)
             
-//         })
-//     };
+        })
+    };
     
-//     function cookFood (){
-//         return new Promise ((resolve, reject) => {
-//             setTimeout(() => {
+    function cookFood (){
+        return new Promise ((resolve, reject) => {
+            setTimeout(() => {
     
-//                 const foodCooked = false;
+                const foodCooked = false;
     
-//                 if (foodCooked){
-//                     resolve("The food is ready and served")
-//                 }else{
-//                     reject("He didn't cook the food")
-//                 }
+                if (foodCooked){
+                    resolve("The food is ready and served")
+                }else{
+                    reject("He didn't cook the food")
+                }
     
-//             },2000)
-//         })
-//     };
+            },2000)
+        })
+    };
 
-// // async function allChores (){
+async function allChores (){
 
-// //     try {
-// //         const cleanHouseResult = await cleanHouse();
-// //         console.log(cleanHouseResult);
+    try {
+        const cleanHouseResult = await cleanHouse();
+        console.log(cleanHouseResult);
     
-// //         const washCarResult = await washCar();
-// //         console.log(washCarResult);
+        const washCarResult = await washCar();
+        console.log(washCarResult);
     
-// //         const cookFoodResult = await cookFood();
-// //         console.log(cookFoodResult);
-// //         console.log("All tasks completed")
-// //     }
-// //     catch(error){
-// //         console.error(error)
-// //     }
+        const cookFoodResult = await cookFood();
+        console.log(cookFoodResult);
+        console.log("All tasks completed")
+    }
+    catch(error){
+        console.error(error)
+    }
     
-// // }
+}
 
-// // allChores();
+allChores();
 
 
 
