@@ -9,31 +9,31 @@ const car1 = new Car("BMW", 2022, "Ibagaza", "Green")
 console.log(car1.model)
 
 
-// function task1(callback){
-//         setTimeout(() => {
-//             console.log("Task one is complete");
-//             callback();
-//         },5000);
-// }
+function task1(callback){
+        setTimeout(() => {
+            console.log("Task one is complete");
+            callback();
+        },5000);
+}
 
-// function task2(callback){
-//         setTimeout(() => {
-//             console.log("Task two is complete");
-//             callback();
-//         },4000);
-// }
+function task2(callback){
+        setTimeout(() => {
+            console.log("Task two is complete");
+            callback();
+        },4000);
+}
 
-// function task3(callback){
-//         setTimeout(() => {
-//             console.log("Task three is complete");
-//             callback();
-//         },3000);
-// }
+function task3(callback){
+        setTimeout(() => {
+            console.log("Task three is complete");
+            callback();
+        },3000);
+}
 
 
-// // task1().then(value => {console.log(value)})
-// //        .then(value => {console.log(value)})
-// //        .then(value => {console.log(value); console.log("All task completed")});
+task1().then(value => {console.log(value)})
+       .then(value => {console.log(value)})
+       .then(value => {console.log(value); console.log("All task completed")});
 
 
 // // task1(() => {
