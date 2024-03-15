@@ -1,12 +1,12 @@
-// // function Car(make, year, model, color) {
-// //     this.make = make;
-// //     this.year = year;
-// //     this.model = model;
-// //     this.color = color
-// // }
+function Car(make, year, model, color) {
+    this.make = make;
+    this.year = year;
+    this.model = model;
+    this.color = color
+}
 
-// // const car1 = new Car("BMW", 2022, "Ibagaza", "Green")
-// // console.log(car1.model)
+const car1 = new Car("BMW", 2022, "Ibagaza", "Green")
+console.log(car1.model)
 
 
 // function task1(callback){
